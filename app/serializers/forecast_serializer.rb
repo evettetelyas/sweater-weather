@@ -1,7 +1,5 @@
 class ForecastSerializer
 	include FastJsonapi::ObjectSerializer
-	# has_many :hourly_forecasts
-	# has_many :daily_forecasts
 
 	attribute :formatted_current_time do |object|
 		date = DateTime.strptime(object.current_time.to_s,'%s')
