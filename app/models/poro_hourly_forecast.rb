@@ -11,7 +11,7 @@ class PoroHourlyForecast
 
 	def format_hour
 		hour = DateTime.strptime(@time.to_s,'%s')
-		hour.in_time_zone(@timezone).strftime('%I %p')
+		hour.in_time_zone(@timezone).strftime('%l %p')
 	end
 
 end
