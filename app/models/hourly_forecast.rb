@@ -1,12 +1,17 @@
-class HourlyForecast < ApplicationRecord
-	# def initialize(data)
-	# 	@time = DateTime.strptime(data[:time].to_s,'%s')
-	# 	@temp = data[:temperature]
-	# end
-	belongs_to :forecast
+class HourlyForecast
+	attr_reader :id, :temp, :time, :timezone
 
-	def formatted_time
-		date = DateTime.strptime(self.time.to_s,'%s')
-		date.getlocal.strftime('%I')
+	def initialize(data, timezone)
+		@id = SecureRandom.hex(8)
+		@temp = data[:temperature]
+		@time = data[:time]
+		@timezone = timezone
+		@formatted_time = format_hour
 	end
+
+	def format_hour
+		hour = DateTime.strptime(@time.to_s,'%s')
+		hour.in_time_zone(@timezone).strftime('%l %p')
+	end
+
 end

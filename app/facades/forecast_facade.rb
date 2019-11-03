@@ -82,7 +82,7 @@ class ForecastFacade
 
 	def create_forecast
 		# forecast = Forecast.create(create_hash)
-		forecast = PoroForecast.new(forecast_data)
+		forecast = Forecast.new(forecast_data)
 		# create_hourly(forecast)
 		# create_daily(forecast)
 		forecast.create_hourly(forecast_data[:hourly][:data], forecast.timezone)
