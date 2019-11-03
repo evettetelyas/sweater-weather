@@ -42,19 +42,7 @@ class ForecastFacade
 		hash[:humidity] = forecast_data[:currently][:humidity]
 		hash[:visibility] = forecast_data[:currently][:visibility]
 		hash[:uv_index] = forecast_data[:currently][:uvIndex]
-		# @hour_0 = HourlyForecast.new(data[:hourly][:data][0])
-		# @hour_1 = HourlyForecast.new(data[:hourly][:data][1])
-		# @hour_2 = HourlyForecast.new(data[:hourly][:data][2])
-		# @hour_3 = HourlyForecast.new(data[:hourly][:data][3])
-		# @hour_4 = HourlyForecast.new(data[:hourly][:data][4])
-		# @hour_5 = HourlyForecast.new(data[:hourly][:data][5])
-		# @hour_6 = HourlyForecast.new(data[:hourly][:data][6])
-		# @hour_7 = HourlyForecast.new(data[:hourly][:data][7])
-		# @day_0 = DailyForecast.new(data[:daily][:data][0])
-		# @day_1 = DailyForecast.new(data[:daily][:data][1])
-		# @day_2 = DailyForecast.new(data[:daily][:data][2])
-		# @day_3 = DailyForecast.new(data[:daily][:data][3])
-		# @day_4 = DailyForecast.new(data[:daily][:data][4])
+		hash[:timezone] = forecast_data[:timezone]
 		hash
 	end
 
@@ -62,6 +50,7 @@ class ForecastFacade
 		data = forecast_data[:hourly][:data][index]
 		hash = {}
 		hash[:time] = DateTime.strptime(data[:time].to_s,'%s')
+		# hash[:formatted_time] = hash[:time].in_time_zone(create_hash[:timezone]).strftime('%I %p')
 		hash[:temp] = data[:temperature]
 		hash
 	end
@@ -70,6 +59,7 @@ class ForecastFacade
 		data = forecast_data[:daily][:data][index]
 		hash = {}
 		hash[:day] = DateTime.strptime(data[:time].to_s,'%s')
+		# hash[:formatted_day] = hash[:day].in_time_zone(create_hash[:timezone]).strftime('%A')
 		hash[:summary] = data[:summary]
 		hash[:icon] = data[:icon]
 		hash[:precip_pct] = data[:precipProbability]

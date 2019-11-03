@@ -4,4 +4,9 @@ class HourlyForecast < ApplicationRecord
 	# 	@temp = data[:temperature]
 	# end
 	belongs_to :forecast
+
+	def formatted_time
+		date = DateTime.strptime(self.time.to_s,'%s')
+		date.getlocal.strftime('%I')
+	end
 end

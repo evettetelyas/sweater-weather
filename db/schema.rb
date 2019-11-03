@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_11_02_230059) do
     t.float "humidity"
     t.float "visibility"
     t.string "uv_index"
+    t.string "timezone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -12,6 +12,7 @@ class CreateForecasts < ActiveRecord::Migration[6.0]
       t.float :humidity
       t.float :visibility
       t.string :uv_index
+      t.string :timezone
 
       t.timestamps
     end
