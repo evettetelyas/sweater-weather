@@ -7,6 +7,13 @@ class GoogleService
 		JSON.parse(data.body, symbolize_names: true)
 	end
 
+	def intl_location_data(location)
+		data = conn.get("geocode/json") do |req|
+			req.params[:address] = location
+		end
+		JSON.parse(data.body, symbolize_names: true)
+	end
+
 	def directions(origin, destination)
 		data = conn.get("directions/json") do |req|
       		req.params[:origin] = origin
