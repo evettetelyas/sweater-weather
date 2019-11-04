@@ -1,6 +1,9 @@
 class AntipodeFacade
+	attr_reader :id, :city_name, :current_weather, :location
+
 	def initialize(location)
 		@location = location
+		@id = SecureRandom.hex(8)
 	end
 
 	def google_service
@@ -37,9 +40,16 @@ class AntipodeFacade
 
 	def current_weather
 		forecast = Forecast.new(forecast_data)
-		forecast.create_hourly(forecast_data[:hourly][:data], forecast.timezone)
-		forecast.create_daily(forecast_data[:daily][:data])
+		# forecast.create_hourly(forecast_data[:hourly][:data], forecast.timezone)
+		# forecast.create_daily(forecast_data[:daily][:data])
 		forecast
+	end
+
+	def forecast
+		hash = {}
+		hash[:summary] = current_weather.daily_summary
+		hash[:current_temp] = current_weather.temp
+		hash
 	end
 
 	def antipode_city_data
