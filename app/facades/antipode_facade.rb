@@ -39,10 +39,7 @@ class AntipodeFacade
 	end
 
 	def current_weather
-		forecast = Forecast.new(forecast_data)
-		# forecast.create_hourly(forecast_data[:hourly][:data], forecast.timezone)
-		# forecast.create_daily(forecast_data[:daily][:data])
-		forecast
+		Forecast.new(forecast_data)
 	end
 
 	def forecast
