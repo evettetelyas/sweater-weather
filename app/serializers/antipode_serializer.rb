@@ -3,16 +3,10 @@ class AntipodeSerializer
 	
 	attributes :id
 
-	attribute :location_name do |obj|
-		obj.city_name
-	end
+	attribute :location_name, &:city_name
 
-	attribute :forecast do |obj|
-		obj.forecast
-	end
+	attribute :forecast, &:forecast
 
-	attribute :search_location do |obj|
-		obj.location
-	end
+	attribute :search_location, &:location
 
   end
