@@ -10,46 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_02_230059) do
+ActiveRecord::Schema.define(version: 2019_11_03_234236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "daily_forecasts", force: :cascade do |t|
-    t.integer "day"
-    t.string "summary"
-    t.string "icon"
-    t.float "precip_pct"
-    t.float "high"
-    t.float "low"
-    t.bigint "forecast_id", null: false
-    t.index ["forecast_id"], name: "index_daily_forecasts_on_forecast_id"
-  end
-
-  create_table "forecasts", force: :cascade do |t|
-    t.string "current_summary"
-    t.integer "current_time"
-    t.string "daily_summary"
-    t.float "high"
-    t.float "low"
-    t.string "icon"
-    t.float "temp"
-    t.float "feels_like"
-    t.float "humidity"
-    t.float "visibility"
-    t.string "uv_index"
-    t.string "timezone"
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.string "api_key"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "hourly_forecasts", force: :cascade do |t|
-    t.integer "time"
-    t.float "temp"
-    t.bigint "forecast_id", null: false
-    t.index ["forecast_id"], name: "index_hourly_forecasts_on_forecast_id"
-  end
-
-  add_foreign_key "daily_forecasts", "forecasts"
-  add_foreign_key "hourly_forecasts", "forecasts"
 end
