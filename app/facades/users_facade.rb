@@ -13,4 +13,4 @@
 # 		user.update(api_key: SecureRandom.hex(16))
 # 		user.api_key
 # 	end
-end
+# end
