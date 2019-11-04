@@ -11,7 +11,7 @@ class AntipodeFacade
 	end
 
 	def get_coords
-		google_service.intl_location_data(@location)
+		google_service.location_data(@location)
 	end
 
 	def lat_lng

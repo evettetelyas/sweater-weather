@@ -9,7 +9,8 @@ class BackgroundsFacade
 	end
 
 	def get_location_data
-		google_service.location_data(@city, @state)
+		location = @city + "+" + @state
+		google_service.location_data(location)
 	end
 
 	def lat_lng
