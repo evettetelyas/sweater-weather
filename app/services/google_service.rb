@@ -1,15 +1,23 @@
 class GoogleService
 
 	def location_data(city, state)
-		data = conn.get("json") do |req|
+		data = conn.get("geocode/json") do |req|
 			req.params[:address] = city + "+" + state
+		end
+		JSON.parse(data.body, symbolize_names: true)
+	end
+
+	def directions(origin, destination)
+		data = conn.get("directions/json") do |req|
+      		req.params[:origin] = origin
+      		req.params[:destination] = destination
 		end
 		JSON.parse(data.body, symbolize_names: true)
 	end
 
 	private
 	def conn
-		Faraday.new(url: "https://maps.googleapis.com/maps/api/geocode/") do |f|
+		Faraday.new(url: "https://maps.googleapis.com/maps/api/") do |f|
 		  f.adapter  Faraday.default_adapter
 		  f.params[:key] = ENV["GOOGLE_API_KEY"]
 		end
