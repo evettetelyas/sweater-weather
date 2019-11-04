@@ -3,8 +3,12 @@ class AntipodeFacade
 		@location = location
 	end
 
+	def google_service
+		GoogleService.new
+	end
+
 	def get_coords
-		GoogleService.new.intl_location_data(@location)
+		google_service.intl_location_data(@location)
 	end
 
 	def lat_lng
@@ -36,5 +40,14 @@ class AntipodeFacade
 		forecast.create_hourly(forecast_data[:hourly][:data], forecast.timezone)
 		forecast.create_daily(forecast_data[:daily][:data])
 		forecast
+	end
+
+	def antipode_city_data
+		google_service.city_data(format_lat_lng)
+	end
+
+	def city_name
+		data = antipode_city_data[:results][0][:address_components]
+		data[2][:long_name] + ", " + data[3][:long_name]
 	end
 end
