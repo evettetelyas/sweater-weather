@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "antipode spec" do
-	it "should show antipode city data for a city" do
+	it "should show antipode city data for a city", :vcr do
 
 		get "/api/v1/antipode?location=hongkong"
 

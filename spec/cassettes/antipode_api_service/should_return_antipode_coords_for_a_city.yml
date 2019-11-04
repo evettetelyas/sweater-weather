@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://amypode.herokuapp.com/api/v1/antipodes?lat=-22.3193039&long=-65.8306389
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Key:
+      - "<ANTIPODE_API_KEY>"
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Nov 2019 17:32:57 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"68ef8bae1d5d37ae21482b81f1fbc539"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d661ce98-da45-4ad8-bddb-21cae4092b17
+      X-Runtime:
+      - '0.002889'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"antipode","attributes":{"lat":22.3193039,"long":114.1693611}}}'
+    http_version: 
+  recorded_at: Mon, 04 Nov 2019 17:32:57 GMT
+recorded_with: VCR 5.0.0

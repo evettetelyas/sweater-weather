@@ -1,10 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "forecast spec" do
-	it "should show a forecast for a city" do
-		# get "/api/v1/forecast?location=denver,co"
-		# @controller = Api::V1::ForecastsController
-		# get :show, {:params => {:location => 'denver,co'}}
+	it "should show a forecast for a city", :vcr do
 		get "/api/v1/forecast?location=denver,co"
 
 		data = JSON.parse(response.body, symbolize_names: true)

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "google api service" do
-	it "should return lat and long for a city" do
+	it "should return lat and long for a city", :vcr do
 		service = GoogleService.new
 		data = service.location_data("Denver", "CO")
 

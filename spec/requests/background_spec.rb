@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "background spec" do
-	it "should show a background for a city" do
+	it "should show a background for a city", :vcr do
 
 		get "/api/v1/backgrounds?location=denver,co"
 
