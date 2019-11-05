@@ -1,12 +1,14 @@
 class RoadTripsFacade
-
+	include FacadeHelper
+	attr_reader :id, :arrival_forecast, :origin, :destination
 	def initialize(data)
+		@id = SecureRandom.hex(8)
 		@origin = data["origin"]
 		@destination = data["destination"].gsub(" ", ",")
 	end
 
 	def directions
-		GoogleService.new.directions(@origin, @destination)
+		google_service.directions(@origin, @destination)
 	end
 
 	def distance_data
