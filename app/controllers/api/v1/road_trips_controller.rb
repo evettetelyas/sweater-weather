@@ -10,5 +10,3 @@ class Api::V1::RoadTripsController < ApplicationController
 		end
 	end
 end
-
-# f57753c17e8dd3835b757de82b25e3b9
