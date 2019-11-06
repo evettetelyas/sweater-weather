@@ -21,4 +21,12 @@ RSpec.describe "forecast spec" do
 		expect(data[:data][:attributes]).to have_key(:hourly_forecasts)
 		expect(data[:data][:attributes]).to have_key(:daily_forecasts)
 	end
+
+	it "should not show a forecast for no", :vcr do
+		get "/api/v1/forecast?location=nowhere"
+
+		data = JSON.parse(response.body, symbolize_names: true)
+
+		expect(data).to eq({message: 'No forecast'})
+	end
 end
