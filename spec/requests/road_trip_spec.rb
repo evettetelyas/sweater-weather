@@ -28,4 +28,20 @@ RSpec.describe "road trips spec" do
 		expect(data[:data][:attributes]).to have_key(:destination)
 		expect(data[:data][:attributes]).to have_key(:approx_hours_to_destination)
 	end
+
+	it 'should not return a road trip with invalid api key' do
+		body = {
+			"origin": "Denver,CO",
+			"destination": "Pueblo,CO",
+			"api_key": "notakey"
+		  }
+
+		headers = { "CONTENT_TYPE" => "application/json" }
+
+		req = post "/api/v1/road_trip", params: body.to_json, headers: headers
+		data = JSON.parse(response.body, symbolize_names: true, quirks_mode: true)
+		
+		expect(req).to eq(401)
+		expect(data).to eq({message: 'invalid key'})
+	end
 end
