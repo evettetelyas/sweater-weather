@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "flickr api service" do
-	it "should return an image for a city" do
+	it "should return an image for a city", :vcr do
 		service = FlickrService.new
 		data = service.image_data("denver", "co", "39.7392","-104.9903")
 

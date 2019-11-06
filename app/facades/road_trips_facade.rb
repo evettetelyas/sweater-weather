@@ -1,12 +1,17 @@
 class RoadTripsFacade
-
+	include GoogleHelper
+	include DarkstarHelper
+	
+	attr_reader :id, :arrival_forecast, :origin, :destination
+	
 	def initialize(data)
+		@id = SecureRandom.hex(8)
 		@origin = data["origin"]
 		@destination = data["destination"].gsub(" ", ",")
 	end
 
 	def directions
-		GoogleService.new.directions(@origin, @destination)
+		google_service.directions(@origin, @destination)
 	end
 
 	def distance_data
@@ -26,10 +31,6 @@ class RoadTripsFacade
 		hrs += 1 if distance_data[:min] >= 30
 		hrs
 	end
-
-	# def to_epoch
-	# 	calculate_hrs.hours.from_now.to_i
-	# end
 
 	def get_destination_forecast
 		response = conn.get

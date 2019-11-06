@@ -69,3 +69,15 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+VCR.configure do |config|
+  config.ignore_localhost = true
+  config.cassette_library_dir = 'spec/cassettes'
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.filter_sensitive_data("<GOOGLE_API_KEY>") { ENV['GOOGLE_API_KEY'] }
+  config.filter_sensitive_data("<DARKSKY_API_KEY>") { ENV['DARKSKY_API_KEY'] }
+  config.filter_sensitive_data("<FLICKR_API_KEY>") { ENV['FLICKR_API_KEY'] }
+  config.filter_sensitive_data("<FLICKR_API_SECRET>") { ENV['FLICKR_API_SECRET'] }
+  config.filter_sensitive_data("<ANTIPODE_API_KEY>") { ENV['ANTIPODE_API_KEY'] }
+end

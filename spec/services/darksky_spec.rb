@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "darkstar api service" do
-	it "should return a forecast for a city" do
+	it "should return a forecast for a city", :vcr do
 		service = DarkskyApiService.new
 		data = service.forecast_data("39.7392,-104.9903")
 

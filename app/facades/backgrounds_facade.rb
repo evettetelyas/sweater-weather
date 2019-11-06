@@ -1,19 +1,10 @@
 class BackgroundsFacade
+	include GoogleHelper
+	include DarkstarHelper
+	
 	def initialize(location)
 		@city = location.split(",")[0]
 		@state = location.split(",")[1]
-	end
-
-	def google_service
-		GoogleService.new
-	end
-
-	def get_location_data
-		google_service.location_data(@city, @state)
-	end
-
-	def lat_lng
-		get_location_data[:results][0][:geometry][:location]
 	end
 
 	def flickr_service

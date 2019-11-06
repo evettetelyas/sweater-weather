@@ -1,8 +1,15 @@
 class GoogleService
 
-	def location_data(city, state)
+	def location_data(location)
 		data = conn.get("geocode/json") do |req|
-			req.params[:address] = city + "+" + state
+			req.params[:address] = location
+		end
+		JSON.parse(data.body, symbolize_names: true)
+	end
+
+	def city_data(lat_lng)
+		data = conn.get("geocode/json") do |req|
+			req.params[:latlng] = lat_lng
 		end
 		JSON.parse(data.body, symbolize_names: true)
 	end
