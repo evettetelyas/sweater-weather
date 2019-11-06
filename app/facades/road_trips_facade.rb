@@ -33,22 +33,12 @@ class RoadTripsFacade
 	end
 
 	def get_destination_forecast
-		response = conn.get
-		JSON.parse(response.body, symbolize_names: true)
+		data = Faraday.get "#{ENV["URL"]}/api/v1/forecast?location=#{@destination}"
+		JSON.parse(data.body, symbolize_names: true)
 	end
 
 	def arrival_forecast
 		hourlys = get_destination_forecast[:data][:attributes][:hourly_forecasts]
 		hourlys[calculate_hrs]
 	end
-
-	private
-	def conn
-		Faraday.new(url: "http://localhost:3000/api/v1/forecast") do |f|
-		  f.adapter  Faraday.default_adapter
-		  f.params[:location] = @destination
-		end
-	end
-
-
 end
