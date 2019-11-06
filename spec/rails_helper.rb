@@ -3,6 +3,13 @@ require 'faraday'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 
+require 'simplecov'
+SimpleCov.start do
+  add_filter "spec/mailers/user_mailer_spec.rb"
+  add_filter "app/controllers/password_resets_controller.rb"
+  add_filter "app/controllers/application_controller.rb"
+end
+
 require File.expand_path('../config/environment', __dir__)
 
 # Prevent database truncation if the environment is production

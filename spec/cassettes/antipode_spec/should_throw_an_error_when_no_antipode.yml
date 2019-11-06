@@ -1,0 +1,731 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=nowhere&key=<GOOGLE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 06 Nov 2019 14:23:38 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=619
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "322",
+                       "short_name" : "322",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "East 14th Street",
+                       "short_name" : "E 14th St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Manhattan",
+                       "short_name" : "Manhattan",
+                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                    },
+                    {
+                       "long_name" : "New York",
+                       "short_name" : "New York",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "New York County",
+                       "short_name" : "New York County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "New York",
+                       "short_name" : "NY",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "10003",
+                       "short_name" : "10003",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "4241",
+                       "short_name" : "4241",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "322 E 14th St, New York, NY 10003, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.7317696,
+                       "lng" : -73.98411609999999
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 40.7331185802915,
+                          "lng" : -73.98276711970848
+                       },
+                       "southwest" : {
+                          "lat" : 40.7304206197085,
+                          "lng" : -73.98546508029149
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJZ1fMFZ5ZwokRkYrV85CZorY",
+                 "plus_code" : {
+                    "compound_code" : "P2J8+P9 New York, United States",
+                    "global_code" : "87G8P2J8+P9"
+                 },
+                 "types" : [ "bar", "establishment", "point_of_interest" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 06 Nov 2019 14:23:36 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=nowhere&key=<GOOGLE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 06 Nov 2019 14:23:39 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=782
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "322",
+                       "short_name" : "322",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "East 14th Street",
+                       "short_name" : "E 14th St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Manhattan",
+                       "short_name" : "Manhattan",
+                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                    },
+                    {
+                       "long_name" : "New York",
+                       "short_name" : "New York",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "New York County",
+                       "short_name" : "New York County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "New York",
+                       "short_name" : "NY",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "10003",
+                       "short_name" : "10003",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "4241",
+                       "short_name" : "4241",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "322 E 14th St, New York, NY 10003, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.7317696,
+                       "lng" : -73.98411609999999
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 40.7331185802915,
+                          "lng" : -73.98276711970848
+                       },
+                       "southwest" : {
+                          "lat" : 40.7304206197085,
+                          "lng" : -73.98546508029149
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJZ1fMFZ5ZwokRkYrV85CZorY",
+                 "plus_code" : {
+                    "compound_code" : "P2J8+P9 New York, United States",
+                    "global_code" : "87G8P2J8+P9"
+                 },
+                 "types" : [ "bar", "establishment", "point_of_interest" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 06 Nov 2019 14:23:37 GMT
+- request:
+    method: get
+    uri: http://amypode.herokuapp.com/api/v1/antipodes?lat=40.7317696&long=-73.9841161
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Key:
+      - "<ANTIPODE_API_KEY>"
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 06 Nov 2019 14:23:39 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fbf9bb1b00356abf0e9690fa077826f2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8fe92ee7-b5a3-426e-a5e4-aa5baadb1519
+      X-Runtime:
+      - '0.016050'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"antipode","attributes":{"lat":-40.7317696,"long":106.0158839}}}'
+    http_version: 
+  recorded_at: Wed, 06 Nov 2019 14:23:37 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=nowhere&key=<GOOGLE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 06 Nov 2019 14:23:39 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=26
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "322",
+                       "short_name" : "322",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "East 14th Street",
+                       "short_name" : "E 14th St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Manhattan",
+                       "short_name" : "Manhattan",
+                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                    },
+                    {
+                       "long_name" : "New York",
+                       "short_name" : "New York",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "New York County",
+                       "short_name" : "New York County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "New York",
+                       "short_name" : "NY",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "10003",
+                       "short_name" : "10003",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "4241",
+                       "short_name" : "4241",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "322 E 14th St, New York, NY 10003, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.7317696,
+                       "lng" : -73.98411609999999
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 40.7331185802915,
+                          "lng" : -73.98276711970848
+                       },
+                       "southwest" : {
+                          "lat" : 40.7304206197085,
+                          "lng" : -73.98546508029149
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJZ1fMFZ5ZwokRkYrV85CZorY",
+                 "plus_code" : {
+                    "compound_code" : "P2J8+P9 New York, United States",
+                    "global_code" : "87G8P2J8+P9"
+                 },
+                 "types" : [ "bar", "establishment", "point_of_interest" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 06 Nov 2019 14:23:37 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=nowhere&key=<GOOGLE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 06 Nov 2019 14:23:40 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=30
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "322",
+                       "short_name" : "322",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "East 14th Street",
+                       "short_name" : "E 14th St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Manhattan",
+                       "short_name" : "Manhattan",
+                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                    },
+                    {
+                       "long_name" : "New York",
+                       "short_name" : "New York",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "New York County",
+                       "short_name" : "New York County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "New York",
+                       "short_name" : "NY",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "10003",
+                       "short_name" : "10003",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "4241",
+                       "short_name" : "4241",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "322 E 14th St, New York, NY 10003, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.7317696,
+                       "lng" : -73.98411609999999
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 40.7331185802915,
+                          "lng" : -73.98276711970848
+                       },
+                       "southwest" : {
+                          "lat" : 40.7304206197085,
+                          "lng" : -73.98546508029149
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJZ1fMFZ5ZwokRkYrV85CZorY",
+                 "plus_code" : {
+                    "compound_code" : "P2J8+P9 New York, United States",
+                    "global_code" : "87G8P2J8+P9"
+                 },
+                 "types" : [ "bar", "establishment", "point_of_interest" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 06 Nov 2019 14:23:37 GMT
+- request:
+    method: get
+    uri: http://amypode.herokuapp.com/api/v1/antipodes?lat=40.7317696&long=-73.9841161
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Key:
+      - "<ANTIPODE_API_KEY>"
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 06 Nov 2019 14:23:39 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fbf9bb1b00356abf0e9690fa077826f2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6200e352-f914-4f86-af2b-f5fafdce4937
+      X-Runtime:
+      - '0.003466'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"antipode","attributes":{"lat":-40.7317696,"long":106.0158839}}}'
+    http_version: 
+  recorded_at: Wed, 06 Nov 2019 14:23:38 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?key=<GOOGLE_API_KEY>&latlng=-40.7318,106.0159
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 06 Nov 2019 14:23:40 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=118
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "plus_code" : {
+              "global_code" : "4PF87298+79"
+           },
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Indian Ocean",
+                       "short_name" : "Indian Ocean",
+                       "types" : [ "establishment", "natural_feature" ]
+                    }
+                 ],
+                 "formatted_address" : "Indian Ocean",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 10.4186036,
+                          "lng" : 146.9166668
+                       },
+                       "southwest" : {
+                          "lat" : -71.4421996,
+                          "lng" : 13.0882271
+                       }
+                    },
+                    "location" : {
+                       "lat" : -33.137551,
+                       "lng" : 81.826172
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 10.4186036,
+                          "lng" : 146.9166668
+                       },
+                       "southwest" : {
+                          "lat" : -71.4421996,
+                          "lng" : 13.0882271
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJH2p_crJNFxgRN5apY1C_1Oo",
+                 "types" : [ "establishment", "natural_feature" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 06 Nov 2019 14:23:38 GMT
+recorded_with: VCR 5.0.0
