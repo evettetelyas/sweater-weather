@@ -1,6 +1,7 @@
 class BackgroundsFacade
-	include FacadeHelper
-
+	include GoogleHelper
+	include DarkstarHelper
+	
 	def initialize(location)
 		@city = location.split(",")[0]
 		@state = location.split(",")[1]

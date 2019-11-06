@@ -1,5 +1,6 @@
 class AntipodeFacade
-	include FacadeHelper
+	include GoogleHelper
+	include DarkstarHelper
 	
 	attr_reader :id, :city_name, :current_weather, :location
 
