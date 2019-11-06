@@ -2,6 +2,8 @@ class BackgroundsFacade
 	include GoogleHelper
 	include DarkstarHelper
 	
+	attr_reader :id, :title, :single_image_url
+
 	def initialize(location)
 		@city = location.split(",")[0]
 		@state = location.split(",")[1]
@@ -23,10 +25,12 @@ class BackgroundsFacade
 		"https://live.staticflickr.com/#{server}/#{id}_#{secret}_n.jpg"
 	end
 
-	def image
-		hash = get_image_data
-		hash[:url] = single_image_url
-		Background.new(hash)
+	def title
+		get_image_data[:title]
+	end
+
+	def id
+		SecureRandom.hex(8)
 	end
 
 end
